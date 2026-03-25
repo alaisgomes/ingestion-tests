@@ -1,0 +1,94 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "ingestion-test-generator"
+  },
+  "extensionsUsed": ["KHR_materials_unlit"],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "UnlitMaterialTestScene",
+      "nodes": [0, 1]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "UnlitPanel",
+      "mesh": 0,
+      "translation": [-1.5, 0.0, 0.0]
+    },
+    {
+      "name": "UnlitIcon",
+      "mesh": 1,
+      "translation": [1.5, 0.0, 0.0]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "PanelMesh",
+      "primitives": [
+        {
+          "attributes": { "POSITION": 0 },
+          "material": 0
+        }
+      ]
+    },
+    {
+      "name": "IconMesh",
+      "primitives": [
+        {
+          "attributes": { "POSITION": 0 },
+          "material": 1
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "UnlitSolidColor",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [0.2, 0.6, 1.0, 1.0],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9
+      },
+      "extensions": {
+        "KHR_materials_unlit": {}
+      }
+    },
+    {
+      "name": "UnlitTransparent",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [1.0, 1.0, 1.0, 0.5],
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.9
+      },
+      "alphaMode": "BLEND",
+      "extensions": {
+        "KHR_materials_unlit": {}
+      }
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "max": [1.0, 1.0, 0.0],
+      "min": [-1.0, -1.0, 0.0]
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 48
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "data:application/octet-stream;base64,AACAvwAAgL8AAAAAAAAAvwAAgD8AAAAAAAAAPwAAgL8AAAAAAAAAPwAAgD8AAAAA",
+      "byteLength": 48
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "ingestion-test-generator"
+  },
+  "extensionsUsed": ["KHR_lights_punctual"],
+  "extensionsRequired": ["KHR_lights_punctual"],
+  "extensions": {
+    "KHR_lights_punctual": {
+      "lights": [
+        {
+          "name": "DirectionalLight",
+          "type": "directional",
+          "color": [1.0, 0.95, 0.9],
+          "intensity": 3.0
+        },
+        {
+          "name": "PointLight",
+          "type": "point",
+          "color": [1.0, 0.8, 0.6],
+          "intensity": 10.0,
+          "range": 50.0
+        },
+        {
+          "name": "SpotLight",
+          "type": "spot",
+          "color": [1.0, 1.0, 1.0],
+          "intensity": 15.0,
+          "range": 30.0,
+          "spot": {
+            "innerConeAngle": 0.3,
+            "outerConeAngle": 0.7
+          }
+        }
+      ]
+    }
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "LightingTestScene",
+      "nodes": [0, 1, 2, 3]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "SceneRoot",
+      "mesh": 0
+    },
+    {
+      "name": "DirectionalLightNode",
+      "rotation": [0.383, 0.0, 0.0, 0.924],
+      "extensions": {
+        "KHR_lights_punctual": { "light": 0 }
+      }
+    },
+    {
+      "name": "PointLightNode",
+      "translation": [2.0, 3.0, 1.0],
+      "extensions": {
+        "KHR_lights_punctual": { "light": 1 }
+      }
+    },
+    {
+      "name": "SpotLightNode",
+      "translation": [0.0, 5.0, 0.0],
+      "rotation": [0.707, 0.0, 0.0, 0.707],
+      "extensions": {
+        "KHR_lights_punctual": { "light": 2 }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": { "POSITION": 0, "NORMAL": 1 }
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3",
+      "max": [5.0, 0.0, 5.0],
+      "min": [-5.0, 0.0, -5.0]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 4,
+      "type": "VEC3"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 48
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 48,
+      "byteLength": 48
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "data:application/octet-stream;base64,AADAvwAAAAAAAAS/AADAvwAAAAAAAAQ/AADAPQAAAAAAAAS/AADAPQAAAAAAAAQ/AAAAAAAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAAAAAAAAAAAAAAAAAIA/",
+      "byteLength": 96
+    }
+  ]
+}

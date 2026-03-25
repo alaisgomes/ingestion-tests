@@ -1,0 +1,115 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "ingestion-test-generator"
+  },
+  "extensionsUsed": ["EXT_meshopt_compression"],
+  "extensionsRequired": ["EXT_meshopt_compression"],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "MeshoptCompressionTestScene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "OptimizedMeshNode",
+      "mesh": 0
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "indices": 2
+        }
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 256,
+      "type": "VEC3",
+      "max": [1.0, 1.0, 1.0],
+      "min": [-1.0, -1.0, -1.0]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 256,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5123,
+      "count": 512,
+      "type": "SCALAR"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 3072,
+      "byteStride": 12,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 1,
+          "byteOffset": 0,
+          "byteLength": 1024,
+          "byteStride": 12,
+          "mode": "ATTRIBUTES",
+          "count": 256
+        }
+      }
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 3072,
+      "byteLength": 3072,
+      "byteStride": 12,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 1,
+          "byteOffset": 1024,
+          "byteLength": 1024,
+          "byteStride": 12,
+          "mode": "ATTRIBUTES",
+          "filter": "OCTAHEDRAL",
+          "count": 256
+        }
+      }
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 6144,
+      "byteLength": 1024,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 1,
+          "byteOffset": 2048,
+          "byteLength": 512,
+          "byteStride": 2,
+          "mode": "TRIANGLES",
+          "count": 512
+        }
+      }
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 7168
+    },
+    {
+      "uri": "meshopt-compressed-data.bin",
+      "byteLength": 2560
+    }
+  ]
+}
